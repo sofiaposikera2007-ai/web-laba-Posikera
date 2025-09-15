@@ -1,0 +1,30 @@
+
+:root {
+    --Color-text-text: #303030;
+    --Color-bg: #F1F1F1;
+    --Color-icon-icon-success: #29845A;
+    --Color-text-link-link: #0070F3;
+    --Height-table-row: 44px;
+    --Color-bg-fill-fill-success-secondary: #CDFEE1;
+    --Color-text-text-success: #0C5132;
+    --Color-border-border: #E3E3E3;
+}
+
+body {
+    background-color: var(--Color-bg);
+}
+
+.container {
+    width: 100%;
+    max-width: 1376px;
+    margin: 0 auto;
+}
+
+
+.page-heading {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--Color-text-text);
+}
