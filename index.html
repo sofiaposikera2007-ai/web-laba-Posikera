@@ -3,57 +3,53 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/reset.css" />
+    <link rel="stylesheet" href="./resources/styles.css" />
     <title>Settings</title>
-<style>
     
- body{
-  background-color:#D6C0B3;
-  color:#493628;
-  }
-
-p {
- margin: 3px 0px;
-}
-
-</style>
-
  </head>
 <body>
-    <h1>Settings</h1>
+  <div class="container">
+    <h1 class="page-heading">Settings</h1>
 
-    <div >
-    <p>All settings</p>
-    <p>Published</p>
-    <p>BTC</p>
-    <p>USDT</p>
-    <p>TON</p>
-    </div>
 
-    <table style="width:40%">
+<div class="tabs">
+     <div class="tab active">All settings</div>
+       <div class="tab"> Published </div>
+       <div class="tab">BTC</div>
+        <div class="tab">USDT</div>
+       <div class="tab">TON</div>
+      </div>
+ 
+    <table class="table">
     <tr>
-    <td><h3>Setting name</h3></td>
-    <td><h3>Status</h3></td>
+    <td class="setting">Setting name</td>
+    <td class="status">Status</td>
+    <td class="actions"></td>
     </tr>
   
     <tr>
-    <td><a href="#">Content</a></td>
-    <td>Draft</td>
-     <td>
-    <img src="https://www.svgrepo.com/download/511788/delete-1487.svg" width="100" height="13"></td>
+    <td class="setting"><a href="#">Content</a></td>
+    <td class="status"><span class="Status draft">Draft</span></td>
+    <td class="actions">
+      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
     </tr>
 
     <tr>
-    <td><a href="#">Content</a></td>
-    <td>Active</td>
-     <td>
-    <img src="https://www.svgrepo.com/download/511788/delete-1487.svg" width="100" height="13"></td>
+    <td class="setting"><a href="#">Content</a></td>
+    <td class="status"><span class="Status active">Active</span></td>
+    <td class="actions">
+      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
     </tr>
 
     <tr>
-    <td><a href="#">Content</a></td>
-    <td>Active</td>
-    <td>
-    <img src="https://www.svgrepo.com/download/511788/delete-1487.svg" width="100" height="13"></td>
+    <td class="setting"><a href="#">Content</a></td>
+    <td class="status"><span class="Status draft">Draft</span></td>
+    <td class="actions">
+      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
     </tr>
 
   </table>

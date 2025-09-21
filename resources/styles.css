@@ -8,23 +8,127 @@
     --Color-bg-fill-fill-success-secondary: #CDFEE1;
     --Color-text-text-success: #0C5132;
     --Color-border-border: #E3E3E3;
+    --Color-bg-surface-surface: #FFFFFF;
 }
 
 body {
     background-color: var(--Color-bg);
+ 
 }
 
+
 .container {
-    width: 100%;
-    max-width: 1376px;
-    margin: 0 auto;
+    width: 1440px;
+    height: 766px;
+    top: 96px;
+    left: 32px;  
+
 }
 
 
 .page-heading {
-    font-family: "Inter", sans-serif;
-    font-size: 24px;
+  /* Settings */
+    font-family: "Inter";
     font-weight: 700;
+    font-style: bold;
+    font-size: 24px;
     line-height: 32px;
+    letter-spacing: -0.2px;
     color: var(--Color-text-text);
+   
 }
+
+
+/* Tabs */
+.tabs {
+  display: flex;
+  width: 1376px;
+  height: 52px;
+  top: 148px;
+  left: 32px;
+  border-radius: 6px;  /* Закруглені кути */
+  background-color:var(--Color-bg-surface-surface); /* Білий фон */
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  padding: 12px 6px; /* Внутрішні відступи */
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.tab{
+  width: 165px;
+  height: 42px;
+  padding: 12px 6px;
+  border-bottom: 1px solid var(--Color-border-border);
+  cursor: pointer; /* курсор як кнопка */
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--Color-icon-icon-success);
+}
+ 
+
+/* Table */
+.table {
+  width: 1376px;
+  height: 176px;
+  top: 220px;
+  left: 32px;
+  border-radius: 12px;
+  background:var(--Color-bg-surface-surface);
+  border: 1px solid var(--Color-border-border);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+
+}
+.setting{
+  width: 876px;
+  height: 44px;
+  padding: 12px 6px;
+  border-bottom: 1px solid var(--Color-border-border);
+  gap: 8px;
+  cursor: pointer;
+}
+
+.status{
+width: 369px;
+height: 44px;
+padding: 12px 6px;
+gap:8px;
+border-bottom: 1px solid var(--Color-border-border);
+cursor: pointer;
+}
+
+.Status.draft{
+   /* Badge */
+    width: 45px;
+    height: 20px;
+    border-radius: 8px;
+    padding: 2px 8px;
+    background-color: var(--Color-border-border);
+    color: #616161;
+}
+
+.Status.active {
+  /* Badge */
+  width: 52px;
+  height: 20px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  background-color:var(--Color-bg-fill-fill-success-secondary);
+  color:#0C5132
+
+}
+
+.actions{
+  width: 132px;
+  height: 44px;
+  padding: 12px 6px;
+  border-bottom: 1px solid var(--Color-border-border);
+  gap:8px;
+  cursor: pointer;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+
+}
+
