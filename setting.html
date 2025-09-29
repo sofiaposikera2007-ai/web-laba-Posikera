@@ -12,44 +12,63 @@
     
  </head>
 <body>
-  <div class="container">
-    <h1 class="page-heading">Settings</h1>
-    <h1 class="page-heading-2">Setting-name</h1>
+  <div class="container setting">
+   <div class="container setting-1">
+    <h1 class="page-headiing">Home</h1>
+    <h1 class="page-headiing">Setting Name</h1>
+   </div>
+   <div class="container setting-2">
     <button class="discard">Discard</button>
     <button class="save">Save</button>
     <button class="create formula">Create formula</button>
+   </div>
   </div>
 
-  <label for ="title" class="label">Title</label>
-  <input type="text" id="title" class="input" placeholder="setting-name">  
-   
+
+  <div class="setting-title-field input-field">       <!--Створення поля для вводу заголовку-->
+   <label for ="title" class="label">Title</label>
+   <input type="text" id="title" class="input" placeholder="setting-name">  
+   </div>
+
+<div class="formula-container">      
+ <div class="image-cell">
+  <img src ="resources/Group 182.png" class="image-placeholder">
+  </div>
+
   <div class="empty-state">
     <p class="empty-state-text">Oopsie, seems that you have no formulas yet</p>
-    <button class="create formula">+ Create your first formula!</button>
+    <p class="empty-state-subtext">Create your first formula!</p>
   </div>
+  <div class="create-formula-container">
+    <button class="create form"> + </button>
+  </div>
+</div>
 
   <table class ="formula-table">
     <tr>
-      <td class="formula-name">Formula name</td>
-      <td class="formula-status">Status</td>
+      <td class="formulas">Formulas</td>
       <td class="formula-actions"></td>
+      <td class="formula-actionss"></td>
     </tr>
 
     <tr>
       <td class="formula-name">BTC increase each 2 sec for T-Shirts</td>
-      <td class="formula-status"><span class="Status draft">Draft</span></td>
       <td class="formula-actions">
         <img src="resources/edit-svgrepo-com.svg" class="edit" >
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
+      </td>
+      <td class="formula-actionss">
+        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" >
+      </td>
     </tr>
 
     <tr>
       <td class="formula-name">BTC increase each 2 sec for T-Shirts</td>
-      <td class="formula-status"><span class="Status active">Active</span></td>
       <td class="formula-actions">
         <img src="resources/edit-svgrepo-com.svg" class="edit" >
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
+      </td>
+      <td class="formula-actionss">
+        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" >
+      </td>
     </tr>
-
-
   </table>
+  </body>

@@ -12,77 +12,239 @@
     
  </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="setting.html" class="nav-link">Settings</a></li>
-                    <li><a href="formula.html" class="nav-link active">Formulas</a></li>
-                </ul>
-            </nav>
+  <div class="container formula">
+    <header class="header">
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" class="nav-link">settings</a></li>
+                <li><a href="setting.html" class="nav-link">setting-name</a></li>
+                <li><a href="formula.html" class="nav-link active">formula-name</a></li>
+             </ul>
+        </nav>
+ 
+        <div class="header-controls">    <!--Додавання кнопок керування-->
+         <button class="btn-secondary" aria-controls="discard">Discard</button>
+         <button class="btn-primary" aria-controls="save">Save</button>
+        </div>
+    </header>  
 
-        
-       <div class="header-controls">   /*Додавання кнопок керування*/
-    <button class="btn-secondary btn" aria-controls="discard">Discard</button>
-    <button class="btn-primary btn disabled" aria-controls="save">Save</button>
-    </div>
-    </header>
+    <div class="formula-title-field input-field">       <!--Створення поля для вводу заголовку--> 
+     <span class="input-label-body-lg">Title</span>
+     <input type="text" class="input-body-md" placeholder="formula-name">
+    </div>  
 
-    <div class="formula-title-field input-field">      /*Створення поля для вводу заголовку*/  
-    <span class="input-label body-lg">Title</span>
-    <input type="text" class="input body-md" placeholder="formula-name">
-</div>  
+  <div class="formula-main">      <!--Основний вміст сторінки-->  
+   <!-- Налаштування формули -->  
 
-<div class="formula-main">      /*Основний вміст сторінки*/  
-<!-- Налаштування формули -->        
-    <div class="formula-settings formula-column">            
-<!-- Карточка налаштувань -->        
-    </div>        
-<!-- Додавання колекцій -->        
-     <div class="formula-collections formula-column">            
-<!-- Карточка колекцій -->        
- </div>
-
- <div class="formula-settings-card">  /*Створення карток налаштувань*/
-<!-- Заголовок карточки -->
+   <div class="formula-settings-panel">            
+   <!-- Карточка налаштувань -->               
+   <div class="formula-settings-card">  <!--Створення карток налаштувань-->
+   <!-- Заголовок карточки -->
     <div class="formula-heading">
-        <h2 class="heading-lg">Formula settings</h2>
+        <h2 class="heading-lg">Formula settings</h2> 
         <span class="formula-heading-icon">
-            <img src="./assets/icon-question.svg" alt="question">
+            <img src="./resources/QuestionCircle.svg" alt="question">
         </span>
     </div>
     <!-- Поле вводу формули -->
     <div class="input-field">
         <span class="input-label body-lg">Formula</span>
         <input type="text" class="input body-md" placeholder="X * Y">
-        <p class="input-description body-md">        
+        <p class="input-description-body-md">        
          X - cryptocurrency price, Y - product price  </p>
     </div>
     <!-- Інші поля та елементи -->
-</div>
-
-
-
-<div class="search-card" aria-controls="search-crypto">  /*Додавання пошукових полів і результатів*/
-    <div class="input-field input-field-search">
-        <img class="input-field-search-icon" src="./assets/icon-search.svg" alt="search-icon">
-        <input type="text" class="input body-md search-input" placeholder="Search">
-        <p class="input-description search-input-description body-md">Select crypto from the list or search the one you need</p>
+    <div class="input-field">
+        <span class="input-label body-lg">Frequency</span>
+        <input type="text" class="input body-md" placeholder="1000">
+        <p class="input-description-body-md">        
+         Cryptocurrency price update frequency.In milliseconds (like 1000ms== 1s) </p>
     </div>
+
+
+
+    <div class="search-card" aria-controls="search-crypto">   <!--Додавання пошукових полів і результатів -->
+        <div class="input-field-input-field-search">
+          <img class="input-field-search-icon" src="./resources/Search icon.svg" alt="search-icon">
+          <input type="text" class="input-body-md-search-input" placeholder="Search">
+        </div> 
+        <p class="input-description-search">Select crypto from the list or search the one you need</p>
+        
+         
+     <!-- Результати пошуку -->
    
-    <!-- Результати пошуку -->
-   
-    <div class="search-results">
+     <div class="search-results">
         <div class="search-result">
-            <img src="./assets/image-placeholder.jpg" alt="image-placeholder" class="search-result-icon">
-            <span class="search-result-name body-md-b">Bitcoin</span>
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Bitcoin</span>
         </div>
-        <!-- Інші результати -->        
-    </div>        
-    <button class="search-btn-save btn btn-primary">Save</button>
-</div>  
+        <!-- Інші результати -->  
+        <div class="search-result">
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Ethereum</span>
+        </div>
+
+        <div class="search-result">
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Ripple</span>  
+        </div>
+
+        <div class="search-result">
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Litecoin</span>   
+        </div>    
+     </div>
+      <!-- Кнопка збереження -->
+       <div class="search-btn-save-btn">  
+        <button class="search-btn-save-btn-btn-primary">Save</button>
+       </div>
+    </div>
+   </div>
+   </div>
+  
+
+ <div class="formula-collections-products-panel"> 
+  <div class="formula-collections-card">  <!--Створення карток налаштувань-->
+  
+    <!-- Заголовок карточки -->
+    <div class="formula-heading-collect">
+        <h2 class="heading-lg">Add collections</h2> 
+        <span class="collections-arrow">
+            <img src="./resources/CaretUp.svg" alt="arrow">
+        </span>
+    </div>
+
+    <div class="search-card-collection" aria-controls="search-crypto">   <!--Додавання пошукових полів і результатів -->
+        <div class="input-field-input-field-search">
+          <img class="input-field-search-icon" src="./resources/Search icon.svg" alt="search-icon">
+          <input type="text" class="input-body-md-search-input" placeholder="Search">
+        </div>
+         
+     <!-- Результати пошуку -->
+   
+     <div class="search-results">
+
+        <div class="selected">
+            <input type="checkbox"  id="myCheck" class="buttons" >
+            <label for="myCheck" class="label-button"></label>
+            <span class="search-result-name-body-md-b">2 selected</span>
+        </div>
+
+        <div class="search-result">
+            <input type="checkbox" class="button" >
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Collection 1</span>
+        </div>
+        <!-- Інші результати -->  
+        <div class="search-result">
+            <input type="checkbox" class="button" >
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Collection 2</span>
+        </div>
+
+        <div class="search-result">
+            <input type="checkbox" class="button" >
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+            <span class="search-result-name-body-md-b">Collection 3</span>  
+        </div> 
+     </div>
+      <!-- Кнопка збереження -->
+       <div class="search-btn-save-cancel">  
+        <button class="search-btn-cancel-primary">Cancel</button>
+        <button class="search-btn-save-primary">Save</button>
+       </div>
+
+    </div>
+  </div>
 
 
 
+ <div class="formula-products-card">  <!--Створення карток налаштувань-->
+  <!-- Заголовок карточки -->
+    <div class="formula-heading-collect">
+        <h2 class="heading-lg">Add products</h2>
+        <span class="collections-arrow">
+            <img src="./resources/CaretUp.svg" alt="arrow">
+        </span> 
+    </div>
+
+     <div class="search-card-collection-2" aria-controls="search-crypto">   <!--Додавання пошукових полів і результатів -->
+        <div class="input-field-input-field-search">
+          <img class="input-field-search-icon" src="./resources/Search icon.svg" alt="search-icon">
+          <input type="text" class="input-body-md-search-input" placeholder="Search">
+        </div>
+         
+     <!-- Результати пошуку -->
+   
+     <div class="search-results">
+            <div class="search-result-2">
+             <div class="search-result-prod">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Product 1</span>
+             </div>
+
+             <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 1</span>
+             </div>
+
+             <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 2</span>
+             </div>
+
+             <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 3</span>
+             </div>
+            </div>
+           <!-- Інші результати -->  
+       
+          <div  class="search-result-2">
+            <div class="search-result-prod">
+            <input type="checkbox" class="button" >
+            <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon" >
+            <span class="search-result-name-body-md-b">Product 2</span>
+            </div>
+
+            <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 1</span>
+            </div>
+
+            <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 2</span>
+            </div>
+
+            <div class="search-variant">
+             <input type="checkbox" class="button" >
+             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
+             <span class="search-result-name-body-md-b">Variant 3</span>
+            </div>
+           </div>
+         
+        
+        </div>
+
+     </div>
+      <!-- Кнопка збереження -->
+       <div class="search-btn-save-cancel">  
+        <button class="search-btn-cancel-primary">Cancel</button>
+        <button class="search-btn-save-primary">Save</button>
+       </div>
+
+    </div>
+   </div>
+  </div>
+ </div>  <!--Закінчення основного вмісту сторінки-->
+
+</body>
+</html>
     
