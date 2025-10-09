@@ -85,6 +85,7 @@ body {
   border-bottom: 1px solid var(--Color-border-border);
   gap: 8px;
   cursor: pointer;
+  ;
 }
 
 .status{
@@ -168,7 +169,6 @@ cursor: pointer;
 
 .page-headiing{
   display: flex;
-  width: 121px;
   height: 20px;
   font-family: "Inter";
   font-weight: 450;
@@ -463,19 +463,18 @@ cursor: pointer;
 }
 
 
-.header-nav ul{
+.header-nav ul {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 300px;
+  width: 350px;
   height: 20px;
   gap: 12px;
   cursor: pointer;
 }
 
 .nav-link{
-  width: 123px;
   height: 20px;
   font-family: "Inter";
   font-weight: 450;
