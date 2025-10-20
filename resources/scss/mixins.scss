@@ -1,0 +1,26 @@
+@mixin flex-center($justify,$direction) {
+ display: flex;
+ flex-direction: $direction;
+ //align-items: center;
+ justify-content:$justify; 
+}
+
+
+
+@mixin button-style($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+@mixin text($style, $size, $color, $weight, $line-height,$spacing) {
+  font-family: "Inter";
+  font-style:$style;
+  font-size:$size;
+  color:$color;
+  font-weight:$weight;
+  line-height:$line-height;
+  letter-spacing:$spacing;
+}
