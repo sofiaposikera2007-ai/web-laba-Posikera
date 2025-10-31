@@ -16,7 +16,6 @@
 }
 
 @mixin text($style, $size, $color, $weight, $line-height,$spacing) {
-  font-family: "Inter";
   font-style:$style;
   font-size:$size;
   color:$color;

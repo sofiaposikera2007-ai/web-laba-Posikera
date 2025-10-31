@@ -7,12 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/reset.css" />
-    <link rel="stylesheet" href="./resources/styles.css" />
+    <link rel="stylesheet" href="./scss/styles.css" />
     <title>Formulas</title>
     
  </head>
 <body>
-  <div class="container formula">
+  <div class="container">
     <header class="header">
         <nav class="header-nav">
          <ul>   
@@ -34,10 +34,7 @@
     </div>  
 
   <div class="formula-main">      <!--Основний вміст сторінки-->  
-   <!-- Налаштування формули -->  
-
-   <div class="formula-settings-panel">            
-   <!-- Карточка налаштувань -->               
+           
    <div class="formula-settings-card">  <!--Створення карток налаштувань-->
    <!-- Заголовок карточки -->
     <div class="formula-heading">
@@ -55,8 +52,8 @@
     </div>
     <!-- Інші поля та елементи -->
     <div class="input-field">
-        <span class="input-label body-lg">Frequency</span>
-        <input type="text" class="input body-md" placeholder="1000">
+        <span class="input-label">Frequency</span>
+        <input type="text" class="input" placeholder="1000">
         <p class="input-description-body-md">        
          Cryptocurrency price update frequency.In milliseconds (like 1000ms== 1s) </p>
     </div>
@@ -99,7 +96,7 @@
         <button class="search-btn-save-btn-btn-primary">Save</button>
        </div>
     </div>
-   </div>
+ 
    </div>
   
 
@@ -178,7 +175,7 @@
    
      <div class="search-results">
             <div class="search-result-2">
-             <div class="search-result-prod">
+             <div class="search-variant">
              <input type="checkbox" class="button" >
              <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon">
              <span class="search-result-name-body-md-b">Product 1</span>
@@ -205,7 +202,7 @@
            <!-- Інші результати -->  
        
           <div  class="search-result-2">
-            <div class="search-result-prod">
+            <div class="search-variant">
             <input type="checkbox" class="button" >
             <img src="./resources/↪️ Thumbnail.png" alt="image-placeholder" class="search-result-icon" >
             <span class="search-result-name-body-md-b">Product 2</span>
