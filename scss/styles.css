@@ -1,0 +1,971 @@
+@charset "UTF-8";
+body {
+  font-family: "Inter";
+  background-color: #F1F1F1;
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    gap: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    padding: 0 30px;
+    gap: 27px;
+  }
+}
+.page-heading {
+  /* Settings */
+  margin-bottom: 20px;
+  font-style: bold;
+  font-size: 24px;
+  color: #303030;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+}
+
+/* Tabs */
+.tabs {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  height: 42px;
+  border-radius: 4px;
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.13) inset;
+}
+
+@media (min-width: 768px) {
+  .tabs {
+    height: 52px;
+  }
+}
+.tab {
+  color: #303030;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  padding: 6px 10px;
+  line-height: 16px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .tab {
+    min-width: 68px;
+    padding: 10px 36px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .tab {
+    min-width: 80px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.tab.active {
+  border-bottom: 2px solid #29845A;
+}
+
+.tr {
+  border-bottom: 1px solid #000;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  top: 220px;
+  left: 32px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E3E3E3;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+}
+
+.setting {
+  width: 876px;
+  height: 44px;
+  padding: 12px 6px;
+  border-bottom: 1px solid #E3E3E3;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.status {
+  width: 369px;
+  height: 44px;
+  padding: 12px 6px;
+  gap: 8px;
+  border-bottom: 1px solid #E3E3E3;
+  cursor: pointer;
+}
+
+.Status.draft {
+  /* Badge */
+  width: 45px;
+  height: 20px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  background-color: #E3E3E3;
+  color: #616161;
+}
+
+.Status.active {
+  /* Badge */
+  width: 52px;
+  height: 20px;
+  border-radius: 8px;
+  padding: 2px 8px;
+  background-color: #CDFEE1;
+  color: #0C5132;
+}
+
+.actions {
+  width: 132px;
+  height: 44px;
+  padding: 12px 6px;
+  border-bottom: 1px solid #E3E3E3;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+}
+
+/* Settings page styles*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-top: 10px;
+  width: 100%;
+  min-height: 28px;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: -10px;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    margin-bottom: -20px;
+  }
+}
+.setting-2 {
+  display: flex;
+  gap: 8px;
+}
+
+.page-headiing {
+  display: flex;
+  height: 20px;
+  font-style: medium;
+  font-size: 14px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.discard {
+  width: 68px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #303030;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: #FFFFFF;
+  color: #303030;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  gap: 2px;
+}
+
+.save {
+  width: 53px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #616161;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: #E3E3E3;
+  color: #616161;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  gap: 2px;
+}
+
+.create.formula {
+  width: 110px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: #303030;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 12px; /* Відступи зверху і знизу */
+  gap: 2px;
+}
+
+.setting-title-field.input-field {
+  width: 100%;
+  height: 86px;
+  border-radius: 4px;
+  padding: 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.label {
+  width: 30px;
+  height: 20px;
+  font-style: medium;
+  font-size: 14px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.input {
+  width: 1176px;
+  height: 32px;
+  color: var(--Color-bg-surface-surface);
+  border: 0.66px solid var(--Color-border-border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  gap: 4px;
+}
+
+.formula-container {
+  width: 100%;
+  height: 420px;
+  top: 254px;
+  left: 321px;
+  border-radius: 12px;
+  padding: 40px 16px 64px 16px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto; /* відстань під таблицею */
+  margin-bottom: 20px;
+}
+
+.image-cell {
+  width: 226px;
+  height: 226px;
+  padding: 27px 39px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+}
+
+.image-placeholder {
+  width: 148px;
+  height: 171px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 90px;
+  gap: 16px;
+  margin: 20px;
+}
+
+.empty-state-text {
+  width: 400px;
+  height: 20px;
+  text-align: center;
+  font-style: semi-bold;
+  font-size: 14px;
+  color: #303030;
+  font-weight: 650;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.empty-state-subtext {
+  width: 400px;
+  height: 16px;
+  text-align: center;
+  font-style: medium;
+  font-size: 12px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+.create-formula-container {
+  width: 33px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 6px 12px; /* Відступи зверху і знизу */
+  gap: 2px;
+  background-color: #303030;
+}
+
+.create.form {
+  width: 9px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-style: medium;
+  font-size: 13px;
+  color: #FFFFFF;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.formula-table {
+  width: 100%;
+  height: 176px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+.table-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.table-list-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-wrapper {
+  display: flex;
+  gap: 30px;
+}
+
+.formulas {
+  margin-bottom: 20px;
+  font-style: bold;
+  font-size: 20px;
+  color: #303030;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0px;
+}
+
+.formula-name {
+  font-style: medium;
+  font-size: 13px;
+  color: #0070F3;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+@media (min-width: 768px) {
+  .formula-name {
+    font-size: 16px;
+  }
+}
+.formula-actions {
+  width: 59px;
+  height: 44px;
+  padding: 12px 6px;
+  gap: 8px;
+  border-top: 0.5px none var(--Color-border-border);
+  border-bottom: 0.5px none var(--Color-border-border);
+  cursor: pointer;
+}
+
+.formula-actionss {
+  width: 40px;
+  height: 44px;
+  padding: 12px 6px;
+  gap: 8px;
+  border-top: 0.5px none var(--Color-border-border);
+  border-bottom: 0.5px none var(--Color-border-border);
+  cursor: pointer;
+}
+
+.edit {
+  width: 20px;
+  height: 20px;
+}
+
+/*Formula page styles*/
+.header {
+  display: flex;
+  justify-content: space-between; /* Розміщує елементи по краях */
+  width: 100%;
+  height: 28px;
+  margin-bottom: 15px; /* відстань під таблицею */
+  border-bottom: none; /* Цей рядок прибирає риску */
+}
+
+.header-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 350px;
+  height: 20px;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.nav-link {
+  height: 20px;
+  font-style: medium;
+  font-size: 14px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+  /* text-decoration: none; /* Прибирає підкреслення */
+}
+
+.nav-link.active {
+  color: var(--Color-text-text);
+}
+
+.header-controls {
+  display: flex;
+  justify-content: flex-end;
+  width: 247px;
+  height: 28px;
+  gap: 8px;
+  font-family: "Inter";
+  font-weight: 550;
+  font-style: medium;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+
+.btn-secondary {
+  width: 68px;
+  height: 28px;
+  gap: 2px;
+  background-color: #FFFFFF;
+  color: #303030;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  width: 53px;
+  height: 28px;
+  gap: 2px;
+  background-color: #E3E3E3;
+  color: #616161;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.formula-title-field.input-field {
+  width: 100%;
+  height: 86px;
+  border-radius: 4px;
+  padding: 12px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.input-label-body-lg {
+  width: 30px;
+  height: 20px;
+  font-style: medium;
+  font-size: 14px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.input-body-md {
+  width: 100%;
+  height: 32px;
+  font-style: medium;
+  font-size: 13px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+  border: 0.66px solid #E3E3E3;
+  border-radius: 8px;
+  padding: 6px 12px;
+  gap: 4px;
+}
+
+.formula-settings-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 670px;
+  top: 241px;
+  left: 32px;
+  border-radius: 8px;
+  padding: 28px;
+  gap: 14px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+}
+
+@media (min-width: 1440px) {
+  .formula-settings-card {
+    width: 49%;
+  }
+}
+.formula-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 15px; /* відстань під таблицею */
+}
+
+.heading-lg {
+  width: 159px;
+  height: 24px;
+  font-style: semi-bold;
+  font-size: 20px;
+  color: #303030;
+  font-weight: 650;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.formula-heading-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80px;
+  gap: 4px;
+  background-color: #FFFFFF;
+}
+
+.input-label {
+  display: flex;
+  justify-content: flex-start;
+  height: 20px;
+  gap: 8px;
+  vertical-align: middle;
+  font-style: medium;
+  font-size: 13px;
+  color: #303030;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.input {
+  width: 100%;
+  height: 32px;
+  font-style: regular;
+  font-size: 14px;
+  color: #FFFFFF;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  border: 0.66px solid #E3E3E3;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.input-description-body-md {
+  height: 20px;
+  font-style: medium;
+  font-size: 13px;
+  color: #616161;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+/* Картка формула сетінг*/
+.search-card {
+  width: 100%;
+  height: 380px; /*!!!!*/
+  border-radius: 8px;
+  border: 1px solid var(--Color-border-border);
+  padding: 12px;
+  background-color: var(--Color-bg-surface-surface);
+}
+
+.formula-heading-collect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 15px; /* відстань під таблицею */
+}
+
+.collections-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.input-field-input-field-search {
+  display: flex;
+  width: 100%;
+  height: 32px;
+  border: 0.66px solid #E3E3E3;
+  border-radius: 8px;
+  padding: 6px 8px;
+  gap: 2px;
+  background-color: #FFFFFF;
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.input-field-search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.input-body-md-search-input {
+  width: 100%;
+  height: 20px;
+  font-style: medium;
+  font-size: 13px;
+  color: #B5B5B5;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.input-description-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 20px;
+  gap: 4px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  font-style: medium;
+  font-size: 13px;
+  color: #616161;
+  font-weight: 450;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  color: #FFFFFF;
+  border-bottom: 1px solid #E3E3E3;
+  padding: 12px;
+  gap: 12px;
+}
+
+.search-result-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  gap: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0px 0px 1px rgba(0, 0, 0, 0.08); /* Легка тінь */
+}
+
+.search-result-name-body-md-b {
+  width: 536px;
+  height: 20px;
+  font-style: semi-bold;
+  font-size: 13px;
+  color: #303030;
+  font-weight: 650;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+
+.search-btn-save-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 28px;
+  border-radius: 8px;
+  padding: 6px 12px; /* Відступи зверху і знизу */
+  gap: 2px;
+  background-color: #303030;
+  cursor: pointer;
+}
+
+.search-btn-save-btn-btn-primary {
+  width: 29px;
+  height: 16px;
+  font-style: medium;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+/* Формула колекція карта */
+.formula-collections-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 430px;
+  top: 241px;
+  left: 32px;
+  border-radius: 8px;
+  padding: 28px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+  margin-bottom: 20px; /* відстань під таблицею */
+}
+
+.search-card-collection {
+  width: 100%;
+  height: 320px; /*!!!!*/
+  border-radius: 8px;
+  border: 1px hidden #E3E3E3;
+  padding: 12px;
+  background-color: #FFFFFF;
+}
+
+.search-btn-save-cancel {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 28px;
+  padding: 6px 12px; /* Відступи зверху і знизу */
+  gap: 7px;
+}
+
+.search-btn-cancel-primary {
+  width: 302px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #303030;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  border-radius: 8px;
+  border: 1px solid #E3E3E3;
+  background-color: #FFFFFF;
+}
+
+.search-btn-save-primary {
+  width: 302px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  border-radius: 8px;
+  border: 1px solid #E3E3E3;
+  background-color: #303030;
+}
+
+/* Формула продукти карта */
+.formula-products-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 850px;
+  top: 241px;
+  left: 32px;
+  border-radius: 8px;
+  padding: 28px;
+  gap: 14px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.17); /* Легка тінь */
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  padding: 8px 12px;
+  gap: 12px;
+  font-style: medium;
+  font-size: 12px;
+  color: #303030;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  border-bottom: 1px solid #E3E3E3;
+}
+
+.button {
+  width: 16px;
+  height: 16px;
+  accent-color: #303030;
+}
+
+.buttons {
+  display: none; /* ховаємо стандартний checkbox */
+}
+
+.label-button {
+  display: inline-block;
+  text-align: center;
+  width: 16px;
+  height: 16px;
+  font-size: 14px; /* розмір символу */
+  font-weight: bold;
+  border: 1px solid #8a8a8a;
+  border-radius: 2px;
+}
+
+/* Зміна фону при натисканні */
+.buttons:checked + .label-button::after {
+  content: "-";
+  color: #F1F1F1;
+}
+
+.buttons:checked + .label-button {
+  background-color: #303030;
+  color: #F1F1F1;
+}
+
+.formula-main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .formula-main {
+    flex-direction: row;
+  }
+}
+/* Ліва панель */
+.formula-settings-panel {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Права панель */
+.formula-collections-products-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .formula-collections-products-panel {
+    width: 49%;
+  }
+}
+.search-variant {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  color: #FFFFFF;
+  border-bottom: 1px hidden #E3E3E3;
+  padding: 12px 12px 12px 36px;
+  gap: 12px;
+  border-bottom: none;
+}
+
+.search-result-2 {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  color: #FFFFFF;
+  border-bottom: 1px solid #E3E3E3;
+  padding: 12px;
+  gap: 12px;
+}
+
+.search-result-prod {
+  display: flex;
+  align-items: center;
+  width: 612px;
+  height: 64px;
+  color: #FFFFFF;
+  padding: 12px;
+  gap: 12px;
+}
+
+.search-card-collection-2 {
+  width: 100%;
+  height: 1000px; /*!!!!*/
+  border-radius: 8px;
+  border: 1px hidden #E3E3E3;
+  padding: 12px;
+  background-color: #FFFFFF;
+}/*# sourceMappingURL=styles.css.map */
