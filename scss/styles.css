@@ -34,6 +34,22 @@ body {
   letter-spacing: -0.2px;
 }
 
+.btn-primary.btn {
+  width: 110px;
+  height: 28px;
+  font-style: medium;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: 550;
+  line-height: 16px;
+  letter-spacing: 0px;
+  background-color: #303030;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 12px; /* Відступи зверху і знизу */
+  gap: 2px;
+}
+
 /* Tabs */
 .tabs {
   width: 100%;
@@ -333,20 +349,14 @@ body {
   letter-spacing: 0px;
 }
 
-.create-formula-container {
+.create.form {
   width: 33px;
   height: 32px;
   border-radius: 8px;
   padding: 6px 12px; /* Відступи зверху і знизу */
   gap: 2px;
   background-color: #303030;
-}
-
-.create.form {
-  width: 9px;
-  height: 20px;
   cursor: pointer;
-  border-radius: 8px;
   font-style: medium;
   font-size: 13px;
   color: #FFFFFF;
@@ -968,4 +978,8 @@ body {
   border: 1px hidden #E3E3E3;
   padding: 12px;
   background-color: #FFFFFF;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
