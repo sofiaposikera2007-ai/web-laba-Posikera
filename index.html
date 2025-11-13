@@ -8,15 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/reset.css" />
     <link rel="stylesheet" href="./scss/styles.css" />
-    <link rel="setting" href="setting.html"/>
-    <link rel="formula" href="formula.html">
+    <!-- <link rel="setting" href="setting.html"/>
+    <link rel="formula" href="formula.html"> -->
   
     <title>Settings</title>
   </head>
 
  <body>
     <div class="container">
-     <h1 class="page-heading">Settings</h1>
+     <header class='header'>
+      <h1 class="page-heading">Settings</h1>
+       <div class="header-controls">
+        <a href="/setting.html" class="btn-primary btn" aria-controls="create-setting">
+          Create setting
+        </a>
+       </div>
+     </header>
+
    
       <div class="tabs">
        <div class="tab active">All settings</div>
@@ -26,38 +34,208 @@
        <div class="tab">TON</div>
       </div>
  
+
      <table class="table">
-     <tr class="tr">
-     <td class="setting">
-      <a href="/setting.html">Setting name</a>
-     </td>
-     <td class="status">Status</td>
-     <td class="actions"></td>
-     </tr>
+      <thead>
+       <tr>
+        <td class="setting">Setting name</td>
+        <td class="status">Status</td>
+        <td class="actions"></td>
+       </tr>
+      </thead>
   
-     <tr class="tr">
-     <td class="setting"><a href="#">Content</a></td>
-     <td class="status"><span class="Status draft">Draft</span></td>
-     <td class="actions">
-      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
-     </tr>
-
-     <tr class="tr">
-     <td class="setting"><a href="#">Content</a></td>
-     <td class="status"><span class="Status active">Active</span></td>
-     <td class="actions">
-      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
-     </tr>
-
-     <tr class="tr">
-     <td class="setting"><a href="#">Content</a></td>
-     <td class="status"><span class="Status draft">Draft</span></td>
-     <td class="actions">
-      <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" ></td>
-     </tr>
-
+      <tbody class="settings-list "> 
+        <tr class=" hidden settingTemplateElem " id="setting-line-template">
+         <td class="setting"><a href="/setting.html">Content </a></td>
+         <td class="status"><span class="Status draft">Draft</span></td>
+         <td class="actions">
+        <button class="delete">
+         <img src="resources/delete-1487-svgrepo-com (1).svg" alt="delete icon" ></button>
+         </td>
+        </tr> 
+       </tbody>
      </table>
-    </div>
+    
+
+      <div class="formula-container hidden">      
+      <img src ="resources/Group 182.png" alt="chair" class="image-placeholder">
+      <div class="empty-state ">
+      <p class="empty-state-text">Oopsie, seems that you have no settings yet</p>
+      <p class="empty-state-subtext">Create your first setting!</p>
+      </div>
+      <a href="/setting.html"><button class="create form"> + </button></a>
+     </div>
+   </div>  
+<!-- 
+   <div class="empty-state hidden"> <img src ="resources/Group 182.png" alt="chair" class="image-placeholder">
+    <p class="empty-state-text">Oopsie, seems that you have no settings yet</p>
+    <p class="empty-state-subtext">Create your first setting!</p>
+    <a href="setting.html" class="create-btn">+</a>
+</div> -->
+
+    <script type="application/json" id="state">
+      {
+    "currencies": [
+        {
+            "id": 1,
+            "title": "BTC",
+            "value": 0.0001
+        },
+        {
+            "id": 2,
+            "title": "USDT",
+            "value": 1
+        }
+    ],
+    "settings": [
+        {
+            "id": 1,
+            "title": "BTC & USDT increase each 2 sec for T-Shirts",
+            "status": "active",
+            "formulas": [
+                {
+                    "id": 1,
+                    "title": "BTC in used for T-Shirts",
+                    "formula": "X * Y",
+                    "frequency": 2000,
+                    "currency": "BTC",
+                    "targets": {
+                        "collectionsIds": [
+                            1,
+                            2
+                        ],
+                        "products": [
+                            {
+                                "id": 1,
+                                "variantsIds": [
+                                    1,
+                                    2
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": 1,
+                    "title": "USDT in used for hoodies",
+                    "formula": "X + Y",
+                    "frequency": 2000,
+                    "currency": "USDT",
+                    "targets": {
+                        "collectionsIds": [
+                            3,
+                            4
+                        ],
+                        "products": [
+                            {
+                                "id": 3,
+                                "variants": [
+                                    1,
+                                    2,
+                                    3
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "collections": [
+        {
+            "id": 1,
+            "title": "T-Shirts"
+        },
+        {
+            "id": 2,
+            "title": "Hoodies"
+        },
+        {
+            "id": 3,
+            "title": "Socks"
+        },
+        {
+            "id": 4,
+            "title": "Caps"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "title": "Product 1",
+            "price": 11,
+            "variants": [
+                {
+                    "id": 1,
+                    "title": "Black",
+                    "price": 11
+                },
+                {
+                    "id": 2,
+                    "title": "Red",
+                    "price": 12
+                },
+                {
+                    "id": 3,
+                    "title": "White",
+                    "price": 13
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Product 2",
+            "price": 15,
+            "variants": []
+        },
+        {
+            "id": 3,
+            "title": "Product 3",
+            "price": 20.99,
+            "variants": [
+                {
+                    "id": 1,
+                    "title": "Black",
+                    "price": 29.99
+                },
+                {
+                    "id": 2,
+                    "title": "Red",
+                    "price": 20.99
+                },
+                {
+                    "id": 3,
+                    "title": "White",
+                    "price": 29.99
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Product 4",
+            "price": 50,
+            "variants": [
+                {
+                    "id": 1,
+                    "title": "XXL",
+                    "price": 55.99
+                },
+                {
+                    "id": 2,
+                    "title": "XL",
+                    "price": 51.99
+                },
+                {
+                    "id": 3,
+                    "title": "L",
+                    "price": 50
+                }
+             ]
+         }
+      ]
+    }
+   </script>
+   <script src="./scripts/settings-page.js"></script>
 
   </body>
 
