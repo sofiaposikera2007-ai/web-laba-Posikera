@@ -14,6 +14,7 @@
 <body>
   <div class="container">
     <header class="header">
+       
      <nav class="header-nav">
      <ul>
      <li> <a href="index.html" class="page-headiing">Home</a></li>
@@ -22,8 +23,8 @@
      </nav>
 
      <div class="setting-2"> 
-     <button class="discard">Discard</button>
-     <button class="save">Save</button>
+     <button class="discard disabled">Discard</button>
+     <button class="save disabled" >Save</button>
      <a href="formula.html" class="create formula">Create formula</a>
      </div> 
     </header>
@@ -32,10 +33,10 @@
 
    <div class="setting-title-field input-field">       <!--Створення поля для вводу заголовку-->
    <label for ="title" class="label">Title</label>
-   <input type="text" id="title" class="input" placeholder="setting-name">  
+   <input type="text" id="title" class="input settingTitleInput" placeholder="setting-name">  
    </div>
 
-<div class="formula-container">      
+<div class="formula-container hidden ">      
  <div class="image-cell">
   <img src ="resources/Group 182.png" class="image-placeholder">
   </div>
@@ -44,55 +45,273 @@
     <p class="empty-state-text">Oopsie, seems that you have no formulas yet</p>
     <p class="empty-state-subtext">Create your first formula!</p>
   </div>
-   <a href="setting.html"><button class="create form"> + </button></a>
+   <a href="formula.html"><button class="create form"> + </button></a>
 </div>
 
-  <!-- <table class ="formula-table">
-    <tr>
-      <td class="formulas">Formulas</td>
-      <td class="formula-actions"></td>
-      <td class="formula-actionss"></td>
-    </tr>
-
-    <tr>
-      <td class="formula-name">BTC increase each 2 sec for T-Shirts</td>
-      <td class="formula-actions">
-        <img src="resources/edit-svgrepo-com.svg" class="edit" >
-      </td>
-      <td class="formula-actionss">
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" >
-      </td>
-    </tr>
-
-    <tr>
-      <td class="formula-name">BTC increase each 2 sec for T-Shirts</td>
-      <td class="formula-actions">
-        <img src="resources/edit-svgrepo-com.svg" class="edit" >
-      </td>
-      <td class="formula-actionss">
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="delete" >
-      </td>
-    </tr>
-  </table> -->
-  <div class="formula-table">
+    <div class="formula-table">
     <h3 class="formulas">Formulas</h3>
     <ul class="table-list">
-      <li class="table-list-item">
-        <a href="#" class="formula-name">BTC increase each 2 sec for T-Shirts</a>
+      <li class="table-list-item hidden formulaTemplateElem">
+        <a href="formula.html" class="formula-name">BTC increase each 2 sec for T-Shirts</a>
         <div class="img-wrapper">
-        <img src="resources/edit-svgrepo-com.svg" class="icon" >
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="icon" >
+         <button class="icon editbt">  
+         <img src="resources/edit-svgrepo-com.svg" ></button>
+        <button class="icon remove">
+         <img src="resources/delete-1487-svgrepo-com (1).svg" ></button>
         </div>
       </li>
-       <li class="table-list-item">
-        <a href="#" class="formula-name">BTC increase each 2 sec for T-Shirts</a>
+       <li class="table-list-item hidden formulaTemplateElem">
+        <a href="formula.html" class="formula-name">BTC increase each 2 sec for T-Shirts</a>
         <div class="img-wrapper">
-        <img src="resources/edit-svgrepo-com.svg" class="icon" >
-        <img src="resources/delete-1487-svgrepo-com (1).svg" class="icon" >
+         <button class="icon editbt">  
+        <img src="resources/edit-svgrepo-com.svg" ></button>
+         <button class="icon remove">
+        <img src="resources/delete-1487-svgrepo-com (1).svg" ></button>
         </div>
       </li>
     </ul>
   </div>
   </div>
+
+ <script type="application/json" id="state">
+        {
+            "currencies": [
+                {
+                    "id": 1,
+                    "title": "BTC",
+                    "value": 0.0001
+                },
+                {
+                    "id": 2,
+                    "title": "USDT",
+                    "value": 1
+                }
+            ],
+            "settings": [
+                {
+                    "id": 1,
+                    "title": "BTC & USDT increase each 2 sec for T-Shirts",
+                    "status": "active",
+                    "formulas": [
+                        {
+                            "id": 1,
+                            "title": "BTC in used for T-Shirts",
+                            "formula": "X * Y",
+                            "frequency": 2000,
+                            "currency": "BTC",
+                            "targets": {
+                                "collectionsIds": [
+                                    1,
+                                    2
+                                ],
+                                "products": [
+                                    {
+                                        "id": 1,
+                                        "variantsIds": [
+                                            1,
+                                            2
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": 2,
+                            "title": "USDT in used for hoodies",
+                            "formula": "X + Y",
+                            "frequency": 2000,
+                            "currency": "USDT",
+                            "targets": {
+                                "collectionsIds": [
+                                    3,
+                                    4
+                                ],
+                                "products": [
+                                    {
+                                        "id": 3,
+                                        "variants": [1,2,3]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+{
+            "id": 2,
+            "title": "BTC & USDT increase each 2 sec for T-Shirts",
+            "status": "draft",
+            "formulas": [
+              {
+                "id": 1,
+                "title": "BTC in used for T-Shirts",
+                "formula": "X * Y",
+                "frequency": 2000,
+                "currency": "BTC",
+                "targets": {
+                  "collectionsIds": [1, 2],
+                  "products": [
+                    {
+                      "id": 1,
+                      "variantsIds": [1, 2]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 2,
+                "title": "USDT in used for hoodies",
+                "formula": "X + Y",
+                "frequency": 2000,
+                "currency": "USDT",
+                "targets": {
+                  "collectionsIds": [3, 4],
+                  "products": [
+                    {
+                      "id": 3,
+                      "variants": [1, 2, 3]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "title": "BTC & USDT increase each 2 sec for T-Shirts",
+            "status": "active",
+            "formulas": [
+              {
+                "id": 1,
+                "title": "BTC in used for T-Shirts",
+                "formula": "X * Y",
+                "frequency": 2000,
+                "currency": "BTC",
+                "targets": {
+                  "collectionsIds": [1, 2],
+                  "products": [
+                    {
+                      "id": 1,
+                      "variantsIds": [1, 2]
+                    }
+                  ]
+                }
+              },
+              {
+                "id": 2,
+                "title": "USDT in used for hoodies",
+                "formula": "X + Y",
+                "frequency": 2000,
+                "currency": "USDT",
+                "targets": {
+                  "collectionsIds": [3, 4],
+                  "products": [
+                    {
+                      "id": 3,
+                      "variants": [1, 2, 3]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+
+        ],
+            "collections": [
+                {
+                    "id": 1,
+                    "title": "T-Shirts"
+                },
+                {
+                    "id": 2,
+                    "title": "Hoodies"
+                },
+                {
+                    "id": 3,
+                    "title": "Socks"
+                },
+                {
+                    "id": 4,
+                    "title": "Caps"
+                }
+            ],
+            "products": [
+                {
+                    "id": 1,
+                    "title": "Product 1",
+                    "price": 11,
+                    "variants": [
+                        {
+                            "id": 1,
+                            "title": "Black",
+                            "price": 11
+                        },
+                        {
+                            "id": 2,
+                            "title": "Red",
+                            "price": 12
+                        },
+                        {
+                            "id": 3,
+                            "title": "White",
+                            "price": 13
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Product 2",
+                    "price": 15,
+                    "variants": []
+                },
+                {
+                    "id": 3,
+                    "title": "Product 3",
+                    "price": 20.99,
+                    "variants": [
+                        {
+                            "id": 1,
+                            "title": "Black",
+                            "price": 29.99
+                        },
+                        {
+                            "id": 2,
+                            "title": "Red",
+                            "price": 20.99
+                        },
+                        {
+                            "id": 3,
+                            "title": "White",
+                            "price": 29.99
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "title": "Product 4",
+                    "price": 50,
+                    "variants": [
+                        {
+                            "id": 1,
+                            "title": "XXL",
+                            "price": 55.99
+                        },
+                        {
+                            "id": 2,
+                            "title": "XL",
+                            "price": 51.99
+                        },
+                        {
+                            "id": 3,
+                            "title": "L",
+                            "price": 50
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+    <script src="./scripts/settings-edit.js"></script>
+
+
   </body>
 </html>

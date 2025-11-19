@@ -227,8 +227,8 @@ body {
   font-weight: 550;
   line-height: 16px;
   letter-spacing: 0px;
-  background-color: #E3E3E3;
-  color: #616161;
+  background-color: #303030;
+  color: #FFFFFF;
   border-radius: 8px;
   padding: 6px 12px;
   cursor: pointer;
@@ -271,16 +271,6 @@ body {
   font-weight: 450;
   line-height: 20px;
   letter-spacing: 0px;
-}
-
-.input {
-  width: 1176px;
-  height: 32px;
-  color: var(--Color-bg-surface-surface);
-  border: 0.66px solid var(--Color-border-border);
-  border-radius: 8px;
-  padding: 6px 12px;
-  gap: 4px;
 }
 
 .formula-container {
@@ -635,7 +625,7 @@ body {
   height: 32px;
   font-style: regular;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #303030;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0px;
@@ -982,4 +972,28 @@ body {
 
 .hidden {
   display: none;
+}
+
+.disabled {
+  padding: 6px 12px;
+  box-shadow: 0 -1px 0 0 #b5b5b5 inset, -1px 0 0 0 #e3e3e3 inset, 1px 0 0 0 #e3e3e3 inset, 0 1px 0 0 #e3e3e3 inset;
+  color: #b5b5b5;
+  background-color: #000;
+  opacity: 0.1;
+}
+
+/* Стилі для кнопки Discard (активна - біла) */
+.discard.active {
+  background-color: white;
+  color: #333333;
+  /* ... інші стилі ... */
+  opacity: 1;
+}
+
+/* Стилі для кнопки Save (активна - чорна) */
+.save.active {
+  background-color: #333333; /* Чорний фон */
+  color: white; /* Білий текст */
+  /* ... інші стилі ... */
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */

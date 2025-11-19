@@ -13,11 +13,6 @@
 const initialState = document.querySelector(selectors.stateJson).textContent;
 const state = JSON.parse(initialState); // Парсимо JSON-рядок у об'єкт
 
-// Додайте це:
-console.log('Стан (оброблений JSON):', state); 
-console.log('Кількість налаштувань:', state.settings.length);
-
-
 function removeSettingHandler(settingLineElement) {
   // 1. Витягуємо числовий ID з префіксом 'setting-'
     const domId = settingLineElement.id; // Наприклад, 'setting-1'
@@ -35,7 +30,7 @@ function removeSettingHandler(settingLineElement) {
 }
 
 /**
-* Function initialization.
+* Function initialization
 *
 * Creates line settings elements based on the state by copying the template element, change its content and append it to the settings list element.
 *
